@@ -168,7 +168,8 @@ void RotateRecovery::runBehavior()
     double vel = sqrt(2 * acc_lim_th_ * dist_left);
 
     // make sure that this velocity falls within the specified limits
-    vel = std::min(std::max(vel, min_rotational_vel_), max_rotational_vel_);
+    // vel = std::min(std::max(vel, min_rotational_vel_), max_rotational_vel_);
+    vel = 0.1;
 
     geometry_msgs::Twist cmd_vel;
     cmd_vel.linear.x = 0.0;
